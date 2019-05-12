@@ -1,4 +1,16 @@
-task1
-aaa
-new
-task2
+public class Array_task {
+    public static void main(String[] args) {
+        int[] myArray = {1, 3, 2, 6, 9, 7, 3, 5, 8, 0};
+        System.out.println("Индекс максимального значения массива: "
+                +arrayIndexOfMaxValue(myArray));
+    }
+    static int arrayIndexOfMaxValue(int[] array) {
+        int indexOfMax = 0;
+        for (int i = 1; i < array.length; i++){
+            if (array[i] > array[indexOfMax]){
+                indexOfMax = i;
+            }
+        }
+        return indexOfMax;
+    }
+}
